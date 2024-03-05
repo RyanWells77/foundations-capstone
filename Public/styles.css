@@ -1,0 +1,89 @@
+@import url("fonts/stylesheet.css");
+
+.header {
+  background-color:#A6A6A6;
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#logo-left {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 90%;
+  width: auto;
+  margin-left: 20px;
+}
+
+.header-right {
+  /* background-color: #e81111; */
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around;
+    align-items: center; */
+}
+
+.search-container {
+  margin-top: auto;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+#search-bar {
+  width: 60%;
+  height: 4vh;
+}
+
+#ser-btn {
+  height: 100%;
+  margin-left: 10px;
+}
+
+.menus {
+  list-style: none;
+  width: 100%;
+  color: black;
+  font-family: "Gulfs Display Normal", sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+
+.menus li {
+  margin: 0 10px;
+}
+
+.body{
+    /* background-color: crimson; */
+    display: flex;
+    height: 75vh;
+}
+
+#one{
+    background-color: dodgerblue;
+    width: 60vw;
+}
+#two{
+    /* background-color: chartreuse; */
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+
+}
+#feeding-fam{
+    /* display: none; */
+   height: 75%;
+   width: auto;
+}
