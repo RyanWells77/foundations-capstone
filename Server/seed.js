@@ -8,16 +8,16 @@ const seed = () => {
 
         CREATE TABLE recipes (
             recipe_id SERIAL PRIMARY KEY,
-            name VARCHAR,
-            discription VARCHAR (300)
+            recipe_name VARCHAR (250) NOT NULL,
         );
 
 
         CREATE TABLE ingredients (
             ingredient_id SERIAL PRIMARY KEY,
             recipe_id INTEGER,
-            ingredient_name VARCHAR,
-            measurement_unit VARCHAR,
+            ingredient_name VARCHAR NOT NULL,
+            unit VARCHAR NOT NULL,
+            measurement VARCHAR NOT NULL,
             FOREIGN KEY (recipe_id) REFERENCES recipes(recipe_id)
         );
 
@@ -25,8 +25,7 @@ const seed = () => {
         CREATE TABLE instructions (
             instructions_id SERIAL PRIMARY KEY,
             recipe_id INTEGER,
-            step INTEGER,
-            instructions TEXT,
+            instructions TEXT NOT NULL,
             FOREIGN KEY (recipe_id) REFERENCES recipes(recipe_id)
         );
         
