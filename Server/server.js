@@ -11,7 +11,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-
+// seed()
 
 app.post("/api/seed", seed)
 app.post("/api/recipe", addRecipe)

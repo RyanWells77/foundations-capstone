@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="/Public/add-recipe.css" />
     <title>Wells Cookbook</title>
   </head>
   <body>
 
     <header class="header">
       <div id="logo-left">
-        <img id="logo" src="./Wells Cookbook.png" alt="Wells Cookbook Logo" />
+        <img id="logo" src="/Public/Imgs/Wells Cookbook.png" alt="Wells Cookbook Logo" />
       </div>
       <section class="header-right">
         <div class="search-container">
@@ -25,6 +26,8 @@
         <a href="./index.html" class="button">Home</a>
       </section>
     </header>
+    
+    <section class="recipe-form-body">
 
     <section class="form">
       <h1>Add a Recipe</h1>
@@ -48,34 +51,25 @@
             <select name="unit" class="unit" id="unit">
               <option value="lb">lb</option>
               <option value="oz">oz</option>
-              <option value="cup">cups</option>
+              <option value="cup">cup</option>
               <option value="tbs">tbs</option>
               <option value="ts">ts</option>
+              <option value="qt">qt</option>
               <option value="pinch">pinch</option>
             </select>
 
             <div class="measurement">
               <label for="measurement">Measurement:</label>
-              <select name="measurement" class="measurement" id="measurement">
-                <option name="5" id="">5</option>
-                <option name="4" id="">4</option>
-                <option name="3" id="">3</option>
-                <option name="2" id="">2</option>
-                <option name="1" id="">1</option>
-                <option name="2/3" id="">2/3</option>
-                <option name="1/3" id="">1/3</option>
-                <option name="3/4" id="">3/4</option>
-                <option name="1/2" id="">1/2</option>
-                <option name="1/4" id="">1/4</option>
-                <option name="1/8" id="">1/8</option>
-              </select>
-
-              <button type="button" class="removeIngredient">Remove</button>
+               <input type="text"
+                name="measurement" 
+                placeholder="Amount" 
+                id="measurement"
+                required
+                /> 
             </div>
           </div>
+          <button type="button" id="add-ingredient-btn">Add Ingredient</button>
         </div>
-        <button type="button" id="add-ingredient-btn">Add Ingredient</button>
-
         <div>
           <label for="instructions">Instructions:</label>
           <textarea
@@ -85,8 +79,22 @@
             required
           ></textarea>
         </div>
-        <button type="submit">Add Recipe</button>
       </form>
+    </section>
+
+    <section class="submit">
+      <h1>Recipie</h1>
+      <h2 id="recipe-name-display"></h2>
+      <h2>Ingredients</h2>
+      <ul id="ingredients-list"></ul>
+
+      
+
+      <button type="submit" id="submit-btn">Add Recipe</button>
+    </section>
+
+    </section>
+
       <script src="../node_modules/axios/dist/axios.min.js"></script>
       <script src="./add-recipe.js"></script>
     </body>

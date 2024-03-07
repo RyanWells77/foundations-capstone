@@ -1,0 +1,12 @@
+
+.recipe-form-body{
+    background-color: blue;
+    width: 100%;
+    display: flex;
+
+}
+
+#ingredients-list{
+    background-color: brown;
+    width: 50%;
+}
