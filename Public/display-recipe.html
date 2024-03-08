@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Wells Cookbook</title>
+  </head> 
+  <body>
+      <header class="header">
+        <div id="logo-left">
+          <img id="logo" src="/Public/Imgs/Wells Cookbook.png" alt="Wells Cookbook Logo" />
+        </div>
+        <section class="header-right">
+            <div class="search-container">
+                <input id="search-bar" type="search" placeholder="Search for a recipie">
+                <button id="ser-btn" type="submit">Submit</button>
+            </div>
+            <a href="./index.html" class="button">Home</a>
+      </section>
+
+      <div id="display-recipe">
+
+      </div>
+      <script src="../node_modules/axios/dist/axios.min.js"></script>
+      <script src="/Public/display-recipe.js"></script>
+</body>
+</html>

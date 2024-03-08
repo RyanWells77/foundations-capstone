@@ -39,5 +39,17 @@ module.exports = {
         }
         )
         res.sendStatus(200)
+    },
+
+    getRecipe: (req, res) => {
+        sequelize.query(`
+        SELECT recipe_name FROM recipes ORDER BY recipe_name ASC
+    `)
+    .then(dbRes => {
+        // console.log("SQL Query:", sequelize.query)
+        res.status(200).send(dbRes[0])
+    })
+    .catch(err => 
+        console.log(err))
     }
 }

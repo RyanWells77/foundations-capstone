@@ -3,8 +3,8 @@ const cors = require("cors")
 const sequelize = require('./database')
 const seed = require("./seed.js")
 
-const {addRecipe} = require('./controller.js')
-
+const {addRecipe, getRecipe} = require('./controller.js')
+// const {getRecipes} = require('./')
 const app = express()  
 
 
@@ -15,6 +15,8 @@ app.use(cors())
 
 app.post("/api/seed", seed)
 app.post("/api/recipe", addRecipe)
+// app.get('/api/recipes',)
+app.get("/api/recipe", getRecipe)
 
 
 sequelize.sync()
