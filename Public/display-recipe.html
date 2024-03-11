@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Wells Cookbook</title>
-  </head> 
+    <link rel="stylesheet" href="./display-recipe.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Wells Cookbook Recipe</title>
+  </head>
   <body>
-      <header class="header">
-        <div id="logo-left">
-          <img id="logo" src="/Public/Imgs/Wells Cookbook.png" alt="Wells Cookbook Logo" />
-        </div>
-        <section class="header-right">
-            <div class="search-container">
-                <input id="search-bar" type="search" placeholder="Search for a recipie">
-                <button id="ser-btn" type="submit">Submit</button>
-            </div>
-            <a href="./index.html" class="button">Home</a>
-      </section>
-
-      <div id="display-recipe">
-
+    <header class="header">
+      <div id="logo-left">
+        <img
+          id="logo"
+          src="/Public/Imgs/Wells Cookbook.png"
+          alt="Wells Cookbook Logo"
+        />
       </div>
-      <script src="../node_modules/axios/dist/axios.min.js"></script>
-      <script src="/Public/display-recipe.js"></script>
-</body>
+      <section class="header-right">
+        <div class="search-container">
+        </div>
+        <a href="./index.html" class="button">Home</a>
+      </section>
+    </header>
+
+    <div class="recipe-card" id="display-recipe"></div>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="/Public/display-recipe.js"></script>
+  </body>
 </html>

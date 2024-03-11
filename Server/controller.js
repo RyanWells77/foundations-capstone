@@ -19,7 +19,7 @@ module.exports = {
             '${instructions}'
             );
         `);
-        
+
         // There should be in the req.body an array of ingredients. in the array there should be objects that contain (ingredient_name, unit, measurment) keys and values
         ingredients.forEach(ingredients => {
             const { ingredient_name, unit, measurement } = ingredients
@@ -33,9 +33,9 @@ module.exports = {
                ` ).then(dbRes => {
                 // res.status(200).send(dbRes[0])
             })
-            .catch(err => {
-                console.log(err)
-            })
+                .catch(err => {
+                    console.log(err)
+                })
         }
         )
         res.sendStatus(200)
@@ -45,11 +45,29 @@ module.exports = {
         sequelize.query(`
         SELECT recipe_name FROM recipes ORDER BY recipe_name ASC
     `)
-    .then(dbRes => {
-        // console.log("SQL Query:", sequelize.query)
-        res.status(200).send(dbRes[0])
-    })
-    .catch(err => 
-        console.log(err))
+            .then(dbRes => {
+                res.status(200).send(dbRes[0])
+            })
+            .catch(err =>
+                console.log(err))
+    },
+
+    displayRecipe: (req, res) => {
+        console.log(res.body)
+        const {recipeName} = req.query
+        sequelize.query(`
+        SELECT r.recipe_name, i.ingredient_name, i.unit, i.measurement, instr.instructions
+        FROM recipes r
+        LEFT JOIN ingredients i ON r.recipe_id = i.recipe_id
+        LEFT JOIN instructions instr ON r.recipe_id = instr.recipe_id
+        WHERE r.recipe_name = '${recipeName}'
+        
+        `)
+        .then(dbRes =>{
+            res.status(200).send(dbRes[0])
+        })
+        .catch(err => {
+            console.log(err)
+        })
     }
 }

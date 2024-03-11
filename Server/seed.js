@@ -72,11 +72,11 @@ const seed = () => {
 
         INSERT INTO instructions (recipe_id, instructions)
         VALUES 
-        (1,'In a large non-stick skillet, heat oil over medium high heat. season chicken (chucnked) and add to pan. Brown chicken and remove to plate. add red and green peppers and cook for 1 minute. Stir in pineapple chuncks, juice, sugar, vinegar, and chicken stock and bring to a simmer. Simmer until sauce begins to reduce. stir in cornstarch mixture and bring liquid to a simmer. Stir in chicken and cook for 5 minutes. Server over rice.'),
+        (1,'1 In a large non-stick skillet, heat oil over medium high heat. season chicken (chucnked) and add to pan. Brown chicken and remove to plate.\n 2 Add red and green peppers and cook for 1 minute. Stir in pineapple chuncks, juice, sugar, vinegar, and chicken stock and bring to a simmer. Simmer until sauce begins to reduce. stir in cornstarch mixture and bring liquid to a simmer. Stir in chicken and cook for 5 minutes.\n Server over rice.'),
 
-        (2, ' 1 In a large, shallow skillet over moderate heat, melt butter. Add shallots to butter and saute 2 minutes. Add flour to butter and shallot and cook a minute longer. Whisk in consomee in a slow stream. Bring sauce to a bubble and allow to simmer over heat untill ready to server. 2 Pile meat loosely across your cutting board or a large work surace. Season meat with seasoning. Assemble using a pair of kitchen tongs, dip meat into loose au jus sauce and pile into rolls. Server with au jus dipping sauce.' ),
+        (2, ' 1 In a large, shallow skillet over moderate heat, melt butter. Add shallots to butter and saute 2 minutes. Add flour to butter and shallot and cook a minute longer. Whisk in consomee in a slow stream. Bring sauce to a bubble and allow to simmer over heat untill ready to server.\n 2 Pile meat loosely across your cutting board or a large work surace. Season meat with seasoning.\n Assemble using a pair of kitchen tongs, dip meat into loose au jus sauce and pile into rolls. Server with au jus dipping sauce.' ),
         
-        (3, '1 In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter. Mix until smooth.  2 Heat a lightly oild griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using aproximately 1/4 cup for each pancake. Brown on both sides and server hot.  Makes about 8 pancakes.');
+        (3, '1 In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter. Mix until smooth.\n  2 Heat a lightly oild griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using aproximately 1/4 cup for each pancake. Brown on both sides and server hot.\n  Makes about 8 pancakes.');
 
     `).then(() => {
         console.log('DB has been seeded')
