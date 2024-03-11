@@ -13,6 +13,15 @@ const submitForm = document.getElementById('submit-btn')
 const ingredientsArr = []
 
 //Functions
+
+const captureInstructions = () => {
+        const instructions = document.getElementById('instructions')
+        const instructionsValue =instructions.value
+        const instructionsWithBreaks = instructionsValue.replace(/\n/g, '<br>')
+        const instrudtionsDisplay = document.getElementById('instructions-display')
+        instrudtionsDisplay.innerHTML = instructionsWithBreaks
+}
+
 const captureRecipeName = () => {
     const recipeName = document.getElementById('recipe_name').value
     const nameDisplay = document.getElementById('recipe-name-display')
@@ -40,7 +49,7 @@ const removeIngredient = (index) => {
  }
 
 const showIngredients = () => {
-    const recipeTitle = document
+    // const recipeTitle = document
     const ingredientsList = document.getElementById('ingredients-list')
     ingredientsList.innerHTML = ""
 
@@ -83,6 +92,7 @@ addIngredientButton.addEventListener('click', () => {
     addIngredient()
     showIngredients()
     captureRecipeName()
+    captureInstructions()
 })
 submitForm.addEventListener('click', sendForm)
 

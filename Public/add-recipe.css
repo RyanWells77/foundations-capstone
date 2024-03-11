@@ -1,12 +1,109 @@
-
-.recipe-form-body{
-    background-color: blue;
-    width: 100%;
+h1 {
     display: flex;
-
+  justify-content: center;
+  color: black;
+  font-family: "Gulfs Display Normal", sans-serif;
+  font-size: 44px;
+  padding: 30px;
 }
 
-#ingredients-list{
-    background-color: brown;
-    width: 50%;
+.recipe-form-body {
+  /* background-color: blue; */
+  width: 100%;
+  height: 70vh;
+  display: flex;
+    justify-content: space-around;
+}
+
+.form {
+    /* background-color: chartreuse; */
+    width: 42%;
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    font-family: "Gulfs Display Normal", sans-serif;
+    font-size: 18px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 11px 11px 9px -7px rgba(0,0,0,0.75);
+  }
+  
+  #recipe-form {
+    width: 100%; /* Make the form fill the entire width */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+  }
+  
+
+  .form input[type="text"],
+  .form select,
+  .form textarea {
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+.submit{
+    /* background-color: darkmagenta; */
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-family: "Gulfs Display Normal", sans-serif;
+    font-size: 18px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 11px 11px 9px -7px rgba(0,0,0,0.75);
+    /* position: relative; */
+}
+
+.submit h2{
+    font-size: 25px;
+    text-align: center;
+    /* padding: 10px; */
+}
+
+#recipe-name-display{
+    margin: 10px;
+    font-size: 35px;
+    text-align: center;
+ }
+
+ .submit h3{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+#ingredients-list {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+  /* background-color: brown; */
+  list-style: disc;
+  width: 100%;
+  margin-left: 20px;
+  text-align: left;
+}
+
+#instructions-display{
+    /* position: absolute; */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+}
+
+#submit-btn{
+    position: absolute;
+    bottom: 20px;
+    /* left: 50%; */
+    /* transform: translateX(-40); */
 }

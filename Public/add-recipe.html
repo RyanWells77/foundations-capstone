@@ -6,38 +6,43 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="/Public/add-recipe.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Wells Cookbook Add Recipe</title>
   </head>
   <body>
 
     <header class="header">
       <div id="logo-left">
-        <img id="logo" src="/Public/Imgs/Wells Cookbook.png" alt="Wells Cookbook Logo" />
+        <!-- <img id="logo" src="/Public/Imgs/Wells Cookbook.png" alt="Wells Cookbook Logo" /> -->
+        <video width="208" autoplay src="/Public/Imgs/Wells Cookbook.mp4" type="video/mp4"></video>
       </div>
       <section class="header-right">
         <div class="search-container">
-          <input
+          <!-- <input
             id="search-bar"
             type="search"
             placeholder="Search for a recipe"
           />
-          <button id="ser-btn" type="submit">Submit</button>
+          <button id="ser-btn" type="submit">Submit</button> -->
         </div>
         <a href="./index.html" class="button">Home</a>
       </section>
     </header>
     
+    <h1>Add a Recipe</h1>
     <section class="recipe-form-body">
-
-    <section class="form">
-      <h1>Add a Recipe</h1>
+      
+    <div class="form">
       <form id="recipe-form">
         <div>
           <label for="recipe-name">Recipe Name:</label>
           <input type="text" id="recipe_name" />
         </div>
-        <div id="ingredients-container">
-
           <div class="ingredients">
             <label for="ingredients">Ingredient:</label>
             <input id="ingredient-name"
@@ -46,8 +51,8 @@
               name="ingredient[]"
               required
             />
-
-            <label for="unit">Unit:</label>
+            <div>
+              <label for="unit">Unit:</label>
             <select name="unit" class="unit" id="unit">
               <option value="lb">lb</option>
               <option value="oz">oz</option>
@@ -57,6 +62,7 @@
               <option value="qt">qt</option>
               <option value="pinch">pinch</option>
             </select>
+            </div>
 
             <div class="measurement">
               <label for="measurement">Measurement:</label>
@@ -66,10 +72,9 @@
                 id="measurement"
                 required
                 /> 
+                <button type="button" id="add-ingredient-btn">Add Ingredient</button>
             </div>
           </div>
-          <button type="button" id="add-ingredient-btn">Add Ingredient</button>
-        </div>
         <div>
           <label for="instructions">Instructions:</label>
           <textarea
@@ -80,18 +85,18 @@
           ></textarea>
         </div>
       </form>
-    </section>
+    </div>
+    
 
-    <section class="submit">
-      <h1>Recipie</h1>
+    <div class="submit">
+      <h2>Recipe</h2>
       <h2 id="recipe-name-display"></h2>
-      <h2>Ingredients</h2>
+      <h3>Ingredients</h3>
       <ul id="ingredients-list"></ul>
-
-      
-
+      <h3>Instructions</h3>
+      <p id="instructions-display"></p>
       <button type="submit" id="submit-btn">Add Recipe</button>
-    </section>
+    </div>
 
     </section>
 
