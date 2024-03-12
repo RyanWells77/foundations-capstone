@@ -1,3 +1,17 @@
+
+header a {
+  list-style: none;
+  width: 100vw;
+  color: black;
+  font-family: "Gulfs Display Normal", sans-serif;
+  font-size: 20px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+
 h1 {
     display: flex;
   justify-content: center;
@@ -30,6 +44,7 @@ h1 {
   }
   
   #recipe-form {
+    /* padding: 10px; */
     width: 100%; /* Make the form fill the entire width */
     box-sizing: border-box; /* Ensure padding and borders are included in the width */
   }

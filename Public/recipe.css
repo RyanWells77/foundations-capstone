@@ -1,0 +1,46 @@
+
+
+#recipeList{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    font-family: "Gulfs Display Normal", sans-serif;
+    font-size: 20px;
+    width: 70%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 11px 11px 9px -7px rgba(0,0,0,0.75);
+}
+
+#recipeList li{
+    list-style-type: disc;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+#recipe-links{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Gulfs Display Normal", sans-serif;
+    font-size: 35px;
+    /* width: 100vw; */
+    /* margin-left: 20px; */
+    padding: 20px;
+    /* background-color: blueviolet; */
+}
+
+header a {
+    list-style: none;
+    width: 100vw;
+    color: black;
+    font-family: "Gulfs Display Normal", sans-serif;
+    font-size: 20px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    margin-top: auto;
+    padding-bottom: 10px;
+}
+

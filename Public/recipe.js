@@ -1,7 +1,7 @@
 
 console.log("connected to recipe.js")
 
-const recipeList = document.getElementById('recipe-links')
+const recipeList = document.getElementById('recipeList')
 
 
 let recipeNames
@@ -17,10 +17,6 @@ const createList = (recipeNames) => {
   recipeNames.forEach(recipe => {
     console.log(recipe)
     let listItem = document.createElement('li')
-    // let anchor = document.createElement('a')
-    // anchor.href = `display-recipe.html?recipe=${recipe}`
-    // anchor.textContent = recipe
-    // anchor.classList.add('recipe-link')
 
     let recipeNameElement = document.createElement('h3')
     recipeNameElement.textContent = recipe
@@ -31,6 +27,7 @@ const createList = (recipeNames) => {
     recipeNameElement.addEventListener('click', () => navigateToRecipe(recipe))
   })
   recipeList.appendChild(list)
+
 }
 
 

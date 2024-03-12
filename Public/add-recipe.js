@@ -10,6 +10,7 @@ const ingredientName = document.getElementById('ingredient-name')
 const unit = document.getElementById('unit')
 const measurement = document.getElementById('measurement')
 const submitForm = document.getElementById('submit-btn')
+const addInstructionsButton = document.getElementById('inst-btn')
 const ingredientsArr = []
 
 //Functions
@@ -92,7 +93,12 @@ addIngredientButton.addEventListener('click', () => {
     addIngredient()
     showIngredients()
     captureRecipeName()
+    // captureInstructions()
+})
+addInstructionsButton.addEventListener('click', (e) => {
+    e.preventDefault()
     captureInstructions()
+    // showIngredients()
 })
 submitForm.addEventListener('click', sendForm)
 
