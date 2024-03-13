@@ -11,33 +11,36 @@ module.exports = {
             INSERT INTO recipes (recipe_name)
             VALUES (
                 '${recipe_name}'
-                );
-            `);
-        sequelize.query(`
-        INSERT INTO instructions (instructions)
-        VALUES (
-            '${instructions}'
-            );
-        `);
-
-        // There should be in the req.body an array of ingredients. in the array there should be objects that contain (ingredient_name, unit, measurment) keys and values
-        ingredients.forEach(ingredients => {
-            const { ingredient_name, unit, measurement } = ingredients
-            sequelize.query(`
-                INSERT INTO ingredients (ingredient_name, unit, measurement)
+                )
+                RETURNING *;
+            `).then(dbRes => {
+                console.log(dbRes[0])
+                sequelize.query(`
+                INSERT INTO instructions (instructions, recipe_id)
                 VALUES (
-                    '${ingredient_name}',
-                    '${unit}',
-                    '${measurement}'
+                    '${instructions}',
+                    ${dbRes[0][0].recipe_id}
                     );
-               ` ).then(dbRes => {
-                // res.status(200).send(dbRes[0])
-            })
-                .catch(err => {
-                    console.log(err)
-                })
-        }
-        )
+                `);
+                ingredients.forEach(ingredients => {
+                    const { ingredient_name, unit, measurement } = ingredients
+                    sequelize.query(`
+                        INSERT INTO ingredients (ingredient_name, unit, measurement, recipe_id)
+                        VALUES (
+                            '${ingredient_name}',
+                            '${unit}',
+                            '${measurement}',
+                            ${dbRes[0][0].recipe_id}
+                            );
+                       ` )
+                    
+                        .catch(err => {
+                            console.log(err)
+                        })
+                }
+                )
+            });
+
         res.sendStatus(200)
     },
 

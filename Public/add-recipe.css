@@ -34,6 +34,7 @@ h1 {
     width: 42%;
     display: flex;
     flex-wrap: wrap;
+    /* justify-content: space-around; */
     color: black;
     font-family: "Gulfs Display Normal", sans-serif;
     font-size: 18px;

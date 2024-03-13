@@ -38,11 +38,28 @@
     <section class="recipe-form-body">
       
     <div class="form">
-      <form id="recipe-form">
+      <form action="">
         <div>
           <label for="recipe-name">Recipe Name:</label>
           <input type="text" id="recipe_name" />
         </div>
+        <div>
+          <label for="instructions">Instructions:</label>
+          <textarea
+            id="instructions"
+            name="instructions"
+            rows="4"
+            required
+          ></textarea>
+          <button id="inst-btn">Add Instructions</button>
+        </div>
+        
+      </form>
+      <form id="recipe-form">
+        <!-- <div>
+          <label for="recipe-name">Recipe Name:</label>
+          <input type="text" id="recipe_name" />
+        </div> -->
           <div class="ingredients">
             <label for="ingredients">Ingredient:</label>
             <input id="ingredient-name"
@@ -58,7 +75,7 @@
               <option value="oz">oz</option>
               <option value="cup">cup</option>
               <option value="tbs">tbs</option>
-              <option value="ts">ts</option>
+              <option value="ts">tsp</option>
               <option value="qt">qt</option>
               <option value="pinch">pinch</option>
             </select>
@@ -76,7 +93,7 @@
             </div>
           </div>
         </form>
-        <form action="">
+        <!-- <form action="">
         <div>
           <label for="instructions">Instructions:</label>
           <textarea
@@ -87,7 +104,7 @@
           ></textarea>
           <button id="inst-btn">Add Instructions</button>
         </div>
-      </form>
+      </form> -->
     </div>
     
 
